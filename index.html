@@ -30,48 +30,7 @@
       font-weight: 500;
     }
 
-    /* ---------- HOTSPOTS ---------- */
 
-    /* ---------- HOTSPOTS ---------- */
-
-.Hotspot {
-  width: 18px;
-  height: 18px;
-  background: #f7c6cf;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-
-  /* This centers the circle on the 3D anchor */
-  transform: translate(-50%, -50%);
-
-  box-shadow: 0 0 0 6px rgba(247,198,207,0.2);
-  transition: transform 0.2s ease;
-}
-
-.Hotspot:hover {
-  /* Keep translate when scaling */
-  transform: translate(-50%, -50%) scale(1.2);
-}
-
-.HotspotAnnotation {
-  position: absolute;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  padding: 8px 12px;
-  border-radius: 12px;
-  font-size: 13px;
-  white-space: nowrap;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.Hotspot:hover .HotspotAnnotation {
-  opacity: 1;
-}
     /* ---------- PRODUCT PANEL ---------- */
 
     .product-panel {
@@ -134,7 +93,7 @@
 
 <body>
 
-<div class="title">Smart Baby Care Device</div>
+<div class="title">Buds</div>
 
 <model-viewer
   id="gear"
@@ -146,33 +105,17 @@
   field-of-view="30deg">
 
   <!-- HOTSPOTS -->
-<!-- HANDLE (Top) -->
-<button class="Hotspot" slot="hotspot-1"
-  data-position="0m 0.55m 0m"
-  data-normal="0 1 0">
-  <div class="HotspotAnnotation">Ergonomic Handle</div>
-</button>
 
-<!-- SCREEN (Front Center) -->
-<button class="Hotspot" slot="hotspot-2"
-  data-position="0m 0.35m 0.08m"
-  data-normal="0 0 1">
-  <div class="HotspotAnnotation">Smart Display</div>
-</button>
+      <button class="Hotspot" slot="hotspot-1" data-surface="4 1 8813 8781 8812 0.679 0.101 0.220" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Handle</div>
+      </button><button class="Hotspot" slot="hotspot-2" data-surface="4 0 135 128 127 0.733 0.056 0.211" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Screen</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-surface="6 1 9572 9561 9560 0.781 0.209 0.011" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Dryer</div>
+      </button><button class="Hotspot" slot="hotspot-5" data-surface="6 1 12640 12650 12651 0.203 0.013 0.784" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Scrubber</div>
+      </button>
 
-<!-- LEFT BRISTLES -->
-<button class="Hotspot" slot="hotspot-3"
-  data-position="-0.16m 0.12m 0.02m"
-  data-normal="-1 0 0">
-  <div class="HotspotAnnotation">Gentle Silicone Bristles</div>
-</button>
-
-<!-- RIGHT BRISTLES -->
-<button class="Hotspot" slot="hotspot-4"
-  data-position="0.16m 0.12m 0.02m"
-  data-normal="1 0 0">
-  <div class="HotspotAnnotation">Soft Cleaning Surface</div>
-</button>
 
 </model-viewer>
 
@@ -199,7 +142,7 @@
     </div>
 
     <div>
-      <h3>Product Features</h3>
+      <h3>Animations</h3>
       <div class="btn-group">
         <button onclick="playAnimation('Layer 02(D0CEB728-5A1A-4544-A10A-61E11D534D80)Action')">Handle 1</button>
         <button onclick="playAnimation('Layer 02(D0CEB728-5A1A-4544-A10A-61E11D534D80)Action.001')">Handle 2</button>
